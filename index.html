@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artemis Training Mission</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="hud">
+      <div>
+        <h1>Artemis Training Mission</h1>
+        <p class="subtitle">Third-person exploration game · Astronaut simulation</p>
+      </div>
+      <div class="status">
+        <div id="levelName">Level 1: Neutral Buoyancy Training</div>
+        <div id="objective">Objective: Recover all 6 lost tools in the pool.</div>
+      </div>
+    </div>
+
+    <div class="play-wrapper">
+      <div class="stage">
+        <canvas id="game" width="960" height="540" aria-label="Game canvas"></canvas>
+        <div class="overlay" id="overlay"></div>
+      </div>
+      <div class="panel">
+        <h2>Mission Controls</h2>
+        <ul>
+          <li><strong>Move:</strong> WASD / Arrow keys</li>
+          <li><strong>Interact:</strong> Spacebar</li>
+          <li><strong>Restart:</strong> R</li>
+        </ul>
+        <div class="info" id="info">Collect the lost gear floating in the training pool.</div>
+        <div class="progress" id="progress">Items recovered: 0/6</div>
+
+        <div class="meters">
+          <div>
+            <span>Oxygen</span>
+            <div class="meter"><div id="oxygenBar" class="bar"></div></div>
+          </div>
+          <div>
+            <span>Comms</span>
+            <div class="meter"><div id="commsBar" class="bar"></div></div>
+          </div>
+          <div>
+            <span>Suit Temp</span>
+            <div class="meter"><div id="tempBar" class="bar"></div></div>
+          </div>
+        </div>
+
+        <div class="log">
+          <h3>Mission Log</h3>
+          <ol id="logItems">
+            <li class="active">Neutral Buoyancy Training</li>
+            <li>Launch Facility Tour</li>
+            <li>Shuttle Launch</li>
+            <li>Lunar Landing</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        Experience training, facility tour, launch, and lunar landing in one continuous journey.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
